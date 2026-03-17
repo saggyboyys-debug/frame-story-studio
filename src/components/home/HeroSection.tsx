@@ -7,7 +7,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
   const navigate = useNavigate();
-  const stagger = (i: number) => ({ initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] } });
+  const stagger = (i: number) => ({ initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.7, delay: i * 0.15, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } });
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
