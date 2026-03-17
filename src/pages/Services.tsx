@@ -4,7 +4,21 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { CTAStrip } from "@/components/home/CTAStrip";
 import { services } from "@/data/services";
 import servicesBg from "@/assets/services-hero.jpg";
-import aboutBg from "@/assets/about-bg.jpg";
+import serviceMusicVideo from "@/assets/service-music-video.jpg";
+import serviceCinematography from "@/assets/service-cinematography.jpg";
+import serviceVideoProduction from "@/assets/service-video-production.jpg";
+import serviceEvent from "@/assets/service-event.jpg";
+import serviceCreative from "@/assets/service-creative.jpg";
+import serviceSound from "@/assets/service-sound.jpg";
+
+const serviceImages = [
+  serviceMusicVideo,
+  serviceCinematography,
+  serviceVideoProduction,
+  serviceEvent,
+  serviceCreative,
+  serviceSound,
+];
 
 const Services = () => (
   <main>
@@ -38,7 +52,7 @@ const Services = () => (
                 </div>
                 <div className={`${isEven ? "lg:order-1" : ""}`}>
                   <div className="aspect-video overflow-hidden rounded-sm border border-border">
-                    <img src={i % 2 === 0 ? servicesBg : aboutBg} alt={s.title} className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
+                    <img src={serviceImages[i]} alt={s.title} className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" />
                   </div>
                 </div>
               </div>
